@@ -116,7 +116,7 @@ If you instead decide to implement your layout with AutoLayout (NSLayoutAnchor a
 
 Keep in mind that if you use AutoLayout, you should be looking at your console regularly to resolve conflicting constraints.
 
-You may also want to refer to the demo code from last lecture, for examples of (Frame Based Layout)[https://github.com/paigeplan/lec8/blob/master/Programmatic%20Design%20Demo/MainViewController.swift] and (Programmatic AutoLayout)[https://github.com/paigeplan/lec8/blob/master/Programmatic%20Design%20Demo/SecondViewController.swift]. 
+You may also want to refer to the demo code from last lecture, for examples of [Frame Based Layout](https://github.com/paigeplan/lec8/blob/master/Programmatic%20Design%20Demo/MainViewController.swift) and [Programmatic AutoLayout](https://github.com/paigeplan/lec8/blob/master/Programmatic%20Design%20Demo/SecondViewController.swift). 
 
 ## Grading ##
 Once you have finished, please submit your files to [Gradescope](https://gradescope.com/courses/5482). You will need to submit files EVEN if you are being checked off. We have enabled group submission for this assignment, so make sure to include your partner's name if you only worked on one computer.
