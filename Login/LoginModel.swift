@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Model class for verifying username / password combinations. You do not need to edit this file
 class LoginModel {
     
     // Key: berkeley.edu account names. Value: Passwords (student's first name)

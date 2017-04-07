@@ -1,3 +1,6 @@
+
+// Scanner function for parsing csv files. You do not need to edit this file
+
 /*
  * Originally by Drew McCormack: http://www.macresearch.org/cocoa-scientists-part-xxvi-parsing-csv-data
  * Converted to Swift 3 by Magnus Ahltorp

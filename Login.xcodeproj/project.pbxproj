@@ -61,9 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				6C3290961E9561C10069CF6F /* AppDelegate.swift */,
-				6CADA2711E970ABE00EA6C79 /* CSVScanner.swift */,
+				6CEF9AF31E9717BD00FCC303 /* Usernames/Passwords */,
 				6CADA26C1E970A7400EA6C79 /* LoginModel.swift */,
-				6CADA26D1E970A7400EA6C79 /* Lab6Names.csv */,
 				6C3290981E9561C10069CF6F /* LoginViewController.swift */,
 				6C32909D1E9561C10069CF6F /* Assets.xcassets */,
 				6C32909F1E9561C10069CF6F /* LaunchScreen.storyboard */,
@@ -71,6 +70,15 @@
 				6C3290AA1E956D210069CF6F /* Main.storyboard */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		6CEF9AF31E9717BD00FCC303 /* Usernames/Passwords */ = {
+			isa = PBXGroup;
+			children = (
+				6CADA26D1E970A7400EA6C79 /* Lab6Names.csv */,
+				6CADA2711E970ABE00EA6C79 /* CSVScanner.swift */,
+			);
+			name = Usernames/Passwords;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

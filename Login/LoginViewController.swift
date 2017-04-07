@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  Login
 //
 //  Created by Paige Plander on 4/5/17.
@@ -36,14 +36,16 @@ class LoginViewController: UIViewController {
     
     /// YOU DO NOT NEED TO MODIFY ANY OF THE CODE BELOW (but you will want to use `authenticateUser` at some point)
     
-    // Model class to handle checking if username/password combinations are valid
-    // usernames and passwords can be found in the Lab6Names.csv file
+    // Model class to handle checking if username/password combinations are valid.
+    // Usernames and passwords can be found in the Lab6Names.csv file
     let loginModel = LoginModel(filename: "Lab6Names")
 
-    /// imageview for login success image (do not need to modify)
+    /// Imageview for login success image (do not need to modify)
     let loginSuccessView = UIImageView(image: UIImage(named: "oski"))
     
-    /// Displays an alert indicating whether or not the login was successful
+    /// If the provided username/password combination is valid, displays an
+    /// image (in the "loginSuccessView" imageview). If invalid, displays an alert
+    /// telling the user that the login was unsucessful.
     /// You do not need to edit this function, but you will want to use it for the lab.
     ///
     /// - Parameters:
@@ -51,7 +53,7 @@ class LoginViewController: UIViewController {
     ///   - password: the user's first name (what a great password!)
     func authenticateUser(username: String?, password: String?) {
         
-        // if username / password combination is invalid, display an alert
+        // if username / password combination is invalid, present an alert
         if !loginModel.authenticate(username: username, password: password) {
             loginSuccessView.isHidden = true
             let alert = UIAlertController(title: Constants.invalidEmailTitle, message: Constants.invalidEmailMessage, preferredStyle: UIAlertControllerStyle.alert)
@@ -59,16 +61,16 @@ class LoginViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
             
-        // if username / password combination is valid, display success image
+        // If username / password combination is valid, display success image
         else {
-            
             if !loginSuccessView.isDescendant(of: view) {
                 view.addSubview(loginSuccessView)
                 loginSuccessView.contentMode = .scaleAspectFill
             }
+            
             loginSuccessView.isHidden = false
             
-            // constraints for the login success view
+            // Constraints for the login success view
             loginSuccessView.translatesAutoresizingMaskIntoConstraints = false
             loginSuccessView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
             loginSuccessView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
