@@ -31,7 +31,7 @@ Since we will be creating this application programmatically, first delete **Main
       reason: 'Could not find a storyboard named 'Main' in bundle NSBundle </Users/paige/Library/Developer/CoreSimulator/Devices/
       17EEA772-3B18-4D40-9A9A-4C97A7E5034B/data/Containers/Bundle/Application/684846F7-9231-4F40-9541-19C090E49415/Login.app>
 
-To fix this, **open up your app's Info.plist, and delete the key `Main storyboard file base name`** (since we do not have a Storyboard file for our application, this key is not valid).
+To fix this, **open up your app's Info.plist, and delete the key** `Main storyboard file base name` (since we do not have a Storyboard file for our application, this key is not valid). Your app should now run without errors, but will not display anything yet, because we have not specified the initial view controller.
 
 ## Part 2: Setting the Initial View ##
 Since we are not using a storyboard, we now need to programmatically set the initial view controller of our application. To do this, **edit the method `application(_ application: UIApplication, didFinishLaunchingWithOptions` found in AppDelegate.swift** so that our initial view we see when opening the app is the LoginViewController. Check out the [Lecture 8 Programmatic Design Slides](http://iosdecal.com/Lectures/Lecture8.pdf#page=50) for an example of how to do this.
@@ -51,9 +51,9 @@ Now that we've got our project all set up, you can now begin designing the UI fo
     - A `textfield` for the user to input their password
     - A Login `UIButton`
   
-Also, **you must satisfy the following requirements**
+Also, **your implementation must satisfy the following requirements**
 
-- The UIView's width must be 90% of the width of the user's device
+- The UIView containing the text fields and button must have a width equal to 90% of the width of the user's device
 - The vertical spacing between the login button and text field's must be uniform
 - Tapping the login button must trigger an IBAction that checks if the user's e-mail and password combination is valid. You will find the method `authenticateUser` helpful for this part. You can test that your implementation works by trying to log in with your own berkeley.edu account, using your first name as the password (oh, how secure!).
 
@@ -63,7 +63,7 @@ Any other design choices (color, extra UI elements, fonts) are optional, but we'
 
 As for the implementation of the design, you may use either method of programmatic design introduced during lecture (that is, you can either use frames or NSLayoutConstraints).
 
-If you decide to go ahead with Frame-based layout, you may want to use some of the code examples below
+If you decide to go ahead with **Frame-based layout**, you may want to use some of the code examples below
 	
 	// initializer for CGRect. This returns a rectangle with the given size and 
 	// position that can be used to set the frame of your UI elements.
@@ -84,7 +84,7 @@ If you decide to go ahead with Frame-based layout, you may want to use some of t
 	// size as the device's screen, you may use it instead of UIScreen.main to get the sizing information you need.
 	view.center
 	
-If you instead decide to implement your layout with AutoLayout (NSLayoutAnchor and NSLayoutConstraint), you'll find the following methods helpful. I'll just be using `widthAnchor` for these examples, but keep in mind that this can be replaced with `heightAnchor`, `leadingAnchor`, `trailingAnchor`, `centerXAnchor`, etc.)
+If you instead decide to implement your layout with **AutoLayout** (`NSLayoutAnchor` and `NSLayoutConstraint`), you'll find the following methods helpful. I'll just be using `widthAnchor` for these examples, but keep in mind that this can be replaced with `heightAnchor`, `leadingAnchor`, `trailingAnchor`, `centerXAnchor`, etc.)
 	
 	// sets the width of view 1 equal to someCGFloat
 	view1.widthAnchor.constraint(equalToConstant: someCGFloat)
