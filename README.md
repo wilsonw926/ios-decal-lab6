@@ -5,7 +5,7 @@ Tuesday, April 11th at 11:59 pm
 
 ## Overview ##
 
-In today's lab, you'll be creating a very simple login screen for an app 100% programmatically (no Main.storyboard needed!). The focus of this lab is to get you comfortable with creating applications without a Main.storyboard file. Below is an example of what we are looking for.
+In today's lab, you'll be creating a very simple login screen programmatically (*no Storyboard!*). By the end of this lab, you will have walked through the steps of setting up Xcode for apps without storyboards and will have become familiar with the basics of programmatic design. Below is an example of what we are looking for in your submissions.
 
 ![](/README-images/README-1.png)
 
@@ -23,15 +23,7 @@ To push your changes for the lab, run the following commands in your lab-6 folde
 	
 Once you have done this, you can view the files you pushed at https://github.com/YOUR-USERNAME/ios-decal-lab6. You can then use this repository to submit via Gradescope when you are finished (see the **Submission** section below).
 
-## Getting Started ##
-
-Open the project in Xcode and go into the project navigator. Having finished Project 2 Part 1, you should already be familiar with the code provided. 
-
-For this lab, **you will only be editing ImagePickerViewController.swift and it's corresponding View Controller in Storyboard.**
-
-Although skeleton code is provided, feel free to instead use your finished Project 2 code for this lab (you will need to import the code provided in ImagePickerViewController.swift, and update your storyboard).
-
-## Part 1: Getting rid of Main.storyboard ##
+## Part 1: Removing Main.storyboard ##
 
 Since we will be creating this application programmatically, first delete **Main.storyboard** from your project files. If you run your application at this point, your app will crash with the following error
 
